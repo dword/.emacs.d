@@ -7,6 +7,7 @@
  '(calendar-week-start-day 1)
  '(custom-enabled-themes (quote (wombat)))
  '(global-linum-mode t)
+ '(ibuffer-expert t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
@@ -15,15 +16,20 @@
  '(show-paren-mode t)
  '(tab-width 2)
  '(tool-bar-mode nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (add-hook 'org-mode-hook 'org-bullets-mode)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
 (global-set-key (kbd "C-c b") 'ibuffer)
 (global-set-key (kbd "C-c i") 'ido-mode)
