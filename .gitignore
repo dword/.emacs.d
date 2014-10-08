@@ -1,0 +1,12 @@
+*.elc
+*.swp
+.\#*
+\#*
+*~
+auto-save-list/*
+tutorial/
+eshell/*
+elpa/*
+url/*
+ac-comphist.dat
+bookmarks
