@@ -1,0 +1,13 @@
+* bookmark+
+* company
+* company-ghc
+* ghc
+* git-commit-mode
+	ставится вместе с magit 
+* git-rebase-mode
+	ставится вместе с magit
+* haskell-mode
+* magit
+* markdown-mode
+* org
+* org-bullets
