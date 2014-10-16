@@ -17,7 +17,6 @@
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(org-mode-hook (quote (org-bullets-mode)) t)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
