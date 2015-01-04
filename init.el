@@ -12,16 +12,19 @@
  '(global-linum-mode t)
  '(haskell-font-lock-symbols (quote unicode))
  '(haskell-mode-hook (quote (turn-on-eldoc-mode turn-on-haskell-decl-scan turn-on-haskell-doc turn-on-haskell-indentation structured-haskell-mode)))
+ '(haskell-process-path-cabal "~/.cabal/bin/cabal")
  '(ibuffer-expert t)
  '(ibuffer-hook (quote (ibuffer-auto-mode)))
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("marmalade" . "http://marmalade-repo.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/"))))
+ '(racket-program "~/dev/racket/bin/racket")
+ '(raco-program "~/dev/racket/bin/raco")
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(tab-width 2)
+ '(tab-width 4)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -45,6 +48,8 @@
 		 (require 'company-ghc)
 		 (add-to-list 'company-backends 'company-ghc)))
 
+;; ——————————————————————————————— slime ———————————————————————————————
+(setq inferior-lisp-program "/usr/bin/sbcl --noinform")
 ;; —————————————————————————————— my keys ——————————————————————————————
 (global-set-key (kbd "C-c b")      'ibuffer)
 (global-set-key (kbd "C-c i")      'ido-mode)
