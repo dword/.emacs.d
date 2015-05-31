@@ -8,12 +8,14 @@
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(custom-enabled-themes (quote (wombat)))
+ '(eldoc-mode t t)
  '(global-company-mode t)
  '(global-linum-mode t)
  '(haskell-font-lock-symbols (quote unicode))
+ '(haskell-indent-spaces 4)
  '(haskell-mode-hook
    (quote
-	(turn-on-eldoc-mode turn-on-haskell-decl-scan turn-on-haskell-doc turn-on-haskell-indentation structured-haskell-mode)))
+	(turn-on-eldoc-mode turn-on-haskell-decl-scan turn-on-haskell-doc turn-on-haskell-indentation structured-haskell-mode)) t)
  '(haskell-process-path-cabal "~/.cabal/bin/cabal")
  '(ibuffer-expert t)
  '(ibuffer-hook (quote (ibuffer-auto-mode)))
@@ -25,10 +27,7 @@
 	(("gnu" . "http://elpa.gnu.org/packages/")
 	 ("marmalade" . "http://marmalade-repo.org/packages/")
 	 ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(racket-program "~/dev/racket/bin/racket")
- '(raco-program "~/dev/racket/bin/raco")
  '(scroll-bar-mode nil)
- '(shm-use-hdevtools t)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(tab-width 4)
@@ -55,8 +54,6 @@
 		 (require 'company-ghc)
 		 (add-to-list 'company-backends 'company-ghc)))
 
-;; ——————————————————————————————— slime ———————————————————————————————
-(setq inferior-lisp-program "/usr/bin/sbcl --noinform")
 ;; —————————————————————————————— my keys ——————————————————————————————
 (global-set-key (kbd "C-c b")      'ibuffer)
 (global-set-key (kbd "C-c i")      'ido-mode)
@@ -70,7 +67,7 @@
 (global-set-key (kbd "<f1>")       'company-complete)
 (global-set-key (kbd "C-c v")      'visual-line-mode)
 (define-key lisp-mode-shared-map (kbd "C-c e") 'eval-buffer)
-;;(define-key haskell-mode-map (kbd "C-c s") structured-haskell-mode)
+;; (define-key haskell-mode-map (kbd "C-c s") structured-haskell-mode)
 ;; —————————————————————————————— org-mode ——————————————————————————————
 (setq org-todo-keywords
 	  '((sequence "TODO" "WAIT(@/!)" "|" "DONE(@/!)" "CANCELED(@/!)")))
