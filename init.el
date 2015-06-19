@@ -66,8 +66,10 @@
 (global-set-key (kbd "C-`")        'other-window)
 (global-set-key (kbd "<f1>")       'company-complete)
 (global-set-key (kbd "C-c v")      'visual-line-mode)
-(define-key lisp-mode-shared-map (kbd "C-c e") 'eval-buffer)
-;; (define-key haskell-mode-map (kbd "C-c s") structured-haskell-mode)
+(eval-after-load 'lisp-mode
+  '(define-key lisp-mode-shared-map (kbd "C-c e") 'eval-buffer))
+(eval-after-load 'haskell-mode
+  '(define-key haskell-mode-map (kbd "C-c s") 'structured-haskell-mode))
 ;; —————————————————————————————— org-mode ——————————————————————————————
 (setq org-todo-keywords
 	  '((sequence "TODO" "WAIT(@/!)" "|" "DONE(@/!)" "CANCELED(@/!)")))
@@ -81,3 +83,4 @@
 	(interactive)
 	(dired-flag-backup-files)
 	(dired-do-flagged-delete))
+
